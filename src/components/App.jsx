@@ -14,4 +14,18 @@
  *  limitations under the License.
  */
 
-import('./components/App')
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+import '../styles/index.css'
+
+const App = () => (
+  <div className='container'>
+    <div>Name: .</div>
+    <div>Framework: react</div>
+    <div>Language: JavaScript</div>
+    <div>CSS: Empty CSS</div>
+  </div>
+)
+
+ReactDOM.render(<App />, document.getElementById('app'))
