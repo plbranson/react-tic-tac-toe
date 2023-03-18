@@ -14,25 +14,31 @@
  *  limitations under the License.
  */
 
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+.square {
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5rem;
 
-import '../styles/App.css'
+  border: none;
+  border-radius: 10%;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 8px #888888;
 
-function App() {
-  return (
-    <div className='container'>
-      <div>Name: .</div>
-      <div>Framework: react</div>
-      <div>Language: JavaScript</div>
-      <div>CSS: Empty CSS</div>
-    </div>
-  )
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-const app = ReactDOM.createRoot(document.getElementById('app'))
-app.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+.square:hover {
+  box-shadow: 0px 0px 15px #888888;
+}
+
+.cross {
+  color: rgb(255, 70, 37);
+}
+
+.circle {
+  color: rgb(44, 135, 255);
+}

@@ -14,13 +14,17 @@
  *  limitations under the License.
  */
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+import React from 'react'
 
-.container {
-  font-size: 3rem;
-  margin: auto;
-  max-width: 800px;
-  margin-top: 20px;
+import '../styles/Square.css'
+
+export default function Square({ value, onClick }) {
+  // Used to determine the css styles that is going to be applied to the DOM
+  const style = value === 'cross' ? 'square cross' : 'square circle'
+
+  return (
+    <button className={style} onClick={onClick}>
+      {value}
+    </button>
+  )
 }

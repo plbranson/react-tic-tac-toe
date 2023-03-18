@@ -15,24 +15,16 @@
  */
 
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 
-import '../styles/App.css'
+import '../styles/Board.css'
+import Square from './Square'
 
-function App() {
+export default function Board({ board, onClick }) {
   return (
-    <div className='container'>
-      <div>Name: .</div>
-      <div>Framework: react</div>
-      <div>Language: JavaScript</div>
-      <div>CSS: Empty CSS</div>
+    <div className='board'>
+      {board.map((value, index) => {
+        return <Square value={value} onClick={() => value === null && onClick(index)} />
+      })}
     </div>
   )
 }
-
-const app = ReactDOM.createRoot(document.getElementById('app'))
-app.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)

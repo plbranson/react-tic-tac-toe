@@ -15,24 +15,16 @@
  */
 
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 
-import '../styles/App.css'
+import '../styles/ScoreBoard.css'
 
-function App() {
+export default function ScoreBoard({ scores, crossTurn }) {
+  const { crossScore, circleScore } = scores
+
   return (
-    <div className='container'>
-      <div>Name: .</div>
-      <div>Framework: react</div>
-      <div>Language: JavaScript</div>
-      <div>CSS: Empty CSS</div>
+    <div className='scoreboard'>
+      <span className={`score cross-score ${!crossTurn && 'inactive'}`}>X - {crossScore}</span>
+      <span className={`score circle-score ${crossTurn && 'inactive'}`}>O - {circleScore}</span>
     </div>
   )
 }
-
-const app = ReactDOM.createRoot(document.getElementById('app'))
-app.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)

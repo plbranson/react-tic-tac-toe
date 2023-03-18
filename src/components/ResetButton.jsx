@@ -15,24 +15,13 @@
  */
 
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 
-import '../styles/App.css'
+import '../styles/ResetButton.css'
 
-function App() {
+export default function ResetButton({ resetButton }) {
   return (
-    <div className='container'>
-      <div>Name: .</div>
-      <div>Framework: react</div>
-      <div>Language: JavaScript</div>
-      <div>CSS: Empty CSS</div>
-    </div>
+    <button className='reset-button' onClick={resetButton}>
+      Reset
+    </button>
   )
 }
-
-const app = ReactDOM.createRoot(document.getElementById('app'))
-app.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
