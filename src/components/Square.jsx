@@ -20,7 +20,7 @@ import '../styles/Square.css'
 
 export default function Square({ value, onClick }) {
   // Used to determine the css styles that is going to be applied to the DOM
-  const style = value === 'cross' ? 'square cross' : 'square circle'
+  const style = value === 'X' ? 'square cross' : 'square circle'
 
   return (
     <button className={style} onClick={onClick}>

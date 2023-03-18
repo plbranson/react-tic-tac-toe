@@ -19,5 +19,7 @@
 }
 
 body {
+  margin: 0;
+  background-color: #efefef;
   font-family: Arial, Helvetica, sans-serif;
 }
